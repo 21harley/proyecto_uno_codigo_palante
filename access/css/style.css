@@ -1,0 +1,405 @@
+/*
+● Font: https://fonts.google.com/specimen/Lato
+Importar las versiones normal (400) y bold (700).
+● Colores:
+Fondo general: #fbfbfb
+Fondo botón y footer: #af599e
+Fondo de “Hablemos…” en sección contacto:
+rgba(175, 89, 158, 0.3) Textos: #0f0f0f
+Texto botón y footer: #fbfbfb
+● Tamaños de texto:
+Tamaño de texto general: 18px
+Tamaño texto botón: 20px
+Título principal: 36px
+Títulos secundarios: 28px
+● Interlineado 1.2
+● Deben aplicar flexbox para alinear y distribuir los elementos.
+● Tamaños y espaciados:
+No vamos a exigir un resultado exactamente igual a la imagen dada de
+referencia, pero dejamos algunas indicaciones:
+● Alto del header y del footer: 90px (el header debería quedar fijo a
+la parte superior de la ventana al scrollear)
+● Las secciones deben ocupar la totalidad del alto de la pantalla.
+Para eso pueden aplicarles un min-height: 100vh;
+● Espaciado Párrafos: 20px arriba y debajo de cada párrafo
+● Foto de presentación: ancho 400px
+*/
+:root{
+    --color-primario: #101dae;
+    --color-secundario: #fbfbfb;
+    --color-terciario: #0f0f0f;
+    --color-cuarto: #636bcb;
+    --fuente-primaria: 'Lato', sans-serif;
+    --texto-general: 18px;
+    --texto-boton: 20px;
+    --texto-titulo: 36px;
+    --texto-secundario: 28px;
+    --interlineado: 1.2;
+    --altura-header-footer: 90px;
+    --section-header: 100vh;
+    --espaciado-parrafo: 20px;
+    --ancho-foto: 400px;
+}
+html{
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+.body{
+    font-family: var(--fuente-primaria);
+    font-size: var(--texto-general);
+    line-height: var(--interlineado);
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    transition: 0.5s ease-in-out;
+}
+.header{
+    height: var(--altura-header-footer);
+    padding: 0 20px;
+    box-shadow: 0px 0.3px 9px 0px rgba(0,0,0,0.45);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-secundario);
+    transition: 0.5s ease-in-out;
+}
+.header-ul{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 0 20px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.header-ul img{
+    height: 80px;
+}
+.header-ul a{
+    text-decoration: none;
+    color: var(--color-terciario);
+    font-size: var(--texto-boton);
+}
+section{
+    display: block;
+}
+.article-inicio,
+.article-contacto{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: var(--section-header);
+    padding: 0px 20px;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+.header-ul figure,
+.article-inicio figure{
+    margin: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.article-inicio img{
+    width: var(--ancho-foto);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+    /*background:linear-gradient(45deg,var(--color-primario), var(--color-secundario));
+    background-size: 200% 200%;
+	animation: gradient 120s ease infinite;
+    */
+    background:var(--color-primario);
+    text-decoration: none;
+    color: var(--color-secundario);
+    border-radius: 25px;
+    font-size: var(--texto-boton);
+}
+/*
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+*/
+.title-principal{
+    font-size: var(--texto-titulo);
+    text-align: center;
+    margin: 0;
+}
+.article-contacto{
+    gap: 30px;
+}
+.article-contacto__hablemos{
+    background-color: var(--color-cuarto);
+    padding: 15px;
+    border-radius: 10px;
+    color:var(--color-secundario)
+}
+.article-contacto__hablemos h2{
+    font-size: var(--texto-secundario);
+    text-align: center;
+    margin: 0;
+}
+.article-contacto__redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    list-style: none;
+    padding: 0px;
+}
+.article-contacto__redes a{
+    text-decoration: none;
+    color: var(--color-terciario);
+    font-size: var(--texto-boton);
+}
+.article-contacto__redes a img{
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+.article-contacto__redes a img:hover{
+    transform: scale(1.1);
+}
+.article-contacto__redes li:nth-child(1) img{
+    position: relative;
+    top: -3px;
+    width: 70px;
+    height:70px;
+}
+footer{
+    height: var(--altura-header-footer);
+    background-color: var(--color-primario);
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--color-secundario);
+    transition: 0.5s ease-in-out;
+}
+.animate-ball{
+    background-color: var(--color-primario);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50%;
+    left: 20px;
+    animation-name: salto;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    transition: 1s all;
+   }
+   
+   @keyframes salto {
+       0%{
+           bottom: 25%;
+           left: 0%;
+       }
+       16.6%{
+           bottom: 50%;
+           left: 16.6%;
+       }
+       33.2%{
+           bottom: 25%;
+           left: 32.2%;
+       }
+       49.8%{
+           bottom: 50%;
+           left: 49.8% 
+       }
+       66.4%{
+           bottom: 25%;
+           left: 66.4%; 
+       }
+       83%{
+           bottom: 50%;
+           left: 83%;
+       }
+       99.6%{
+           bottom: 25%;
+           left: 99.6%;
+       }
+       100%{
+           bottom: 50%;
+           left: 116.6%;
+       }
+   }
+
+@media (max-width: 580px) {
+    .article-inicio img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 580px) {
+    .article-inicio figure{
+        margin-bottom: 5%;
+    }
+    .article-inicio p{
+        width: 60%;
+    }
+}
+
+.teme-check,
+.teme-check-t,
+.color-check,
+.teme-check-c,
+.animate-check,
+.teme-check-a,
+.button-check,
+.teme-check-b{
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    opacity: 0;
+    z-index: 1;
+    transition: 1s all;
+    border-radius: 50%;
+}
+.teme-check-t,
+.teme-check-c,
+.teme-check-a,
+.teme-check-b{
+    opacity: 1;
+    z-index: 0;
+    background-color: var(--color-secundario);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.teme-check-t{
+    background-image: url(/access/img/luna.png);
+}
+.teme-check-c{
+    background-image: url(/access/img/tema.png);
+}
+.teme-check-a{
+    background-image: url(/access/img/rebotar.png);
+}
+.teme-check-b{
+    background-image: url(/access/img/menu.png);
+}
+.button-check{
+    z-index: 3;
+}
+.teme-check-b{
+    z-index: 2;
+}
+.button-check,
+.teme-check-b{
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+}
+/*boton tema*/
+.teme-check:checked  ~ .header,
+.teme-check:checked  ~ main,
+.teme-check:checked  ~ footer{
+    --color-primario: #ffffff;
+    --color-secundario: #000000;
+    --color-terciario: #ffffff;
+    --color-cuarto: #ffffff;
+}
+.teme-check:checked  ~ .header{
+    box-shadow: 0px 0.3px 9px 0px rgba(255, 255, 255, 0.45);
+}
+
+.teme-check:checked  ~ main  .article-contacto__redes img{
+    filter: invert(100%);
+}
+
+.teme-check:checked  ~ .teme-check-t{
+    background-image: url(/access/img/sol.png);
+}
+/*final*/
+
+/*boton tema-color*/
+.color-check:checked  ~ .header,
+.color-check:checked  ~ main,
+.color-check:checked  ~ footer{
+    transition: 1s all;
+    --color-primario: #af599e;
+    --color-secundario: #fbfbfb;
+    --color-terciario: #0f0f0f;
+    --color-cuarto: rgba(175, 89, 158, 0.3);
+}
+
+.color-check:checked  ~ .header{
+    box-shadow: 0px 0.3px 9px 0px rgba(0,0,0,0.45);
+}
+
+.color-check:checked  ~ main  .article-contacto__redes img{
+    filter: none;
+}
+
+.color-check:checked  ~ .teme-check-c{
+    background-image: url(/access/img/tema-color.png);
+}
+/*final*/
+
+
+/*boton animar*/
+.animate-check:checked ~ .animate-ball{
+    opacity: 1;
+    background-color: var(--color-terciario);
+}
+.animate-check:checked  ~ .teme-check-a{
+    background-image: url(/access/img/rebotar-solid.png);
+}
+/*final*/
+
+/*boton menu*/
+.button-check:checked  ~ .teme-check,
+.button-check:checked  ~ .teme-check-t{
+    transform: translate(80px,0px);
+}
+.button-check:checked  ~ .color-check,
+.button-check:checked  ~ .teme-check-c{
+    transform: translate(45px,-45px);
+}
+.button-check:checked  ~ .animate-check,
+.button-check:checked  ~ .teme-check-a{
+    transform: translate(0px,-80px);
+}
+
+.button-check:checked  ~ .teme-check-b{
+    background-image: url(/access/img/cerrar.png);
+}
+/*final*/
+
+/**/
+
+
