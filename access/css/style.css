@@ -203,6 +203,8 @@ footer{
     color:var(--color-secundario);
     transition: 0.5s ease-in-out;
 }
+/*Ojo se necesita node.js*/
+/*
 .animate-ball{
     background-color: var(--color-primario);
     width: 20px;
@@ -325,6 +327,7 @@ footer{
     left: 20px;
 }
 /*boton tema*/
+/*
 .teme-check:checked  ~ .header,
 .teme-check:checked  ~ main,
 .teme-check:checked  ~ footer{
@@ -344,9 +347,11 @@ footer{
 .teme-check:checked  ~ .teme-check-t{
     background-image: url(/access/img/sol.png);
 }
+*/
 /*final*/
 
 /*boton tema-color*/
+/*
 .color-check:checked  ~ .header,
 .color-check:checked  ~ main,
 .color-check:checked  ~ footer{
@@ -368,10 +373,12 @@ footer{
 .color-check:checked  ~ .teme-check-c{
     background-image: url(/access/img/tema-color.png);
 }
+*/
 /*final*/
 
 
 /*boton animar*/
+/*
 .animate-check:checked ~ .animate-ball{
     opacity: 1;
     background-color: var(--color-terciario);
@@ -379,9 +386,11 @@ footer{
 .animate-check:checked  ~ .teme-check-a{
     background-image: url(/access/img/rebotar-solid.png);
 }
+*/
 /*final*/
 
 /*boton menu*/
+/*
 .button-check:checked  ~ .teme-check,
 .button-check:checked  ~ .teme-check-t{
     transform: translate(80px,0px);
@@ -398,6 +407,7 @@ footer{
 .button-check:checked  ~ .teme-check-b{
     background-image: url(/access/img/cerrar.png);
 }
+*/
 /*final*/
 
 /**/
