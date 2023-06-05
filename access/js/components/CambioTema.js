@@ -21,8 +21,6 @@
 
 */
 let img=true;
-const url=["luna.png","sol.png"];
-
 export default function CambioTema(){
     const button = document.querySelector(".button-temaColor");
     const Img=document.querySelector(".temaColor");
