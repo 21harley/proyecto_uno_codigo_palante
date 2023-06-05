@@ -11,35 +11,28 @@
     <title>John Llanes CV</title>
 </head>
 <body class="body" id="Inicio">
-   <!--
-    require node js
-    <input class="button-check" type="checkbox" >
-    <div class="teme-check-b"></div>
-
-    <input class="teme-check" type="checkbox" >
-    <div class="teme-check-t"></div>
-
-    <input class="color-check" type="checkbox" >
-    <div class="teme-check-c"></div>
-
-    <input class="animate-check" type="checkbox" >
-    <div class="teme-check-a"></div>
-
-    <div class="animate-ball"></div>
-   --> 
+    <div id="color"></div>
     <header class="header">
         <nav>
             <ul class="header-ul">
                 <li>
-                    <figure>
-                        <img src="https://campus.eidosglobal.org/archivos/logos/Logo_principal.png" alt="eidos">
-                    </figure>
+                    <img src="./access/svg/{J_H}.dev.svg" alt="eidos">
                 </li>
                 <li>
-                    <a href="#Inicio">Inicio</a>
-                </li>
-                <li>
-                    <a href="#Contacto">Contacto</a>
+                    <ul class="header-list-title">
+                        <li class="nav__link nav__link--active">
+                            <a href="#Inicio"  >Inicio</a>
+                        </li>
+                        <li class="nav__link">
+                            <a href="#Contacto" >Contacto</a>
+                        </li>
+                        <li class="modal-nav">
+                            <button class="button-modal" id="close-modal">Cerrar Menu</button>
+                        </li>
+                    </ul>
+                    <div class="modal-nav">
+                        <button class="button-modal" id="active-modal">Menu</button>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -53,11 +46,13 @@
                 <figure>
                     <img src="./access/img/1597628730872.jpg" alt="foto">
                 </figure>
-                <h1 class="title-principal">Hola! Soy John Llanes</h1>
-                <p>
-                    Soy un programador autodidacta que tiene bases de programación en lenguaje como c, además aprender base en js. Actualmente, me estoy centrando en el frontend.
-                </p>
-                <a class="download" href="./access/pdf/CV_John_Llanes.pdf" download="CV_John_Llanes.pdf"> Descarga mi CV</a>
+                <div>
+                    <h1 class="title-principal">Hola! Soy John Llanes</h1>
+                    <p>
+                        Soy un programador autodidacta que tiene bases de programación en lenguaje como c, además aprender base en js. Actualmente, me estoy centrando en el frontend.
+                    </p>
+                    <a class="download" href="./access/pdf/CV_John_Llanes.pdf" download="CV_John_Llanes.pdf"> Descarga mi CV</a>
+                </div>
             </article>
             <article class="article-contacto" id="Contacto">
                 <div class="article-contacto__hablemos">
@@ -88,7 +83,12 @@
         </section>
     </main>
     <footer>
+        <button class="button-temaColor" >
+            <img class="temaColor" src="./access/img/luna.png" alt="tema button">
+        </button>
+        <img src="https://campus.eidosglobal.org/archivos/logos/Logo_principal.png" alt="eidos">
         <span>Código Latam</span>
     </footer>
+    <script type="module" src="./access/js/index.js" ></script>
 </body>
 </html>
